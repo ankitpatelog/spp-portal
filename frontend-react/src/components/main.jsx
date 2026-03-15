@@ -1,8 +1,11 @@
 import React from 'react'
-import Button from './button'
+import Header from './Header'
+import Footer from './Footer'
+import Button from './Button'
+
 const Main = () => {
   return (
-       <>
+    <>
     
     <div className="container">
         <div className='p-5 text-center bg-light-dark rounded'>
