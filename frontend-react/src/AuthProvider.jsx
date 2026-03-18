@@ -8,9 +8,9 @@ const AuthProvider = ({children}) => {
         !!localStorage.getItem('accessToken')
     )
   return (
-    <AuthContext.Provider value={{isLoggedIn, setIsLoggedIn}}>
+      <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
         {children}
-    </AuthContext.Provider>
+      </AuthContext.Provider>
   )
 }
 

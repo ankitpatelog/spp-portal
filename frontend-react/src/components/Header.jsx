@@ -1,7 +1,7 @@
 import {useContext} from 'react'
-import Button from './Button'
+import Button from './button'
 import { Link, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../AuthProvider'
+import { AuthContext } from '../authProvider'
 
 const Header = () => {
   const {isLoggedIn, setIsLoggedIn} = useContext(AuthContext)
