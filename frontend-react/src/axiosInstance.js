@@ -32,7 +32,7 @@ axiosInstance.interceptors.response.use(
     // Handle failed responses
     async function(error){
         const originalRequest = error.config;
-        if(error.response.status === 401 && !originalRequest._retry){
+        if(error.response.status === 401 && !originalRequest.retry){
             originalRequest.retry = true;
             const refreshToken = localStorage.getItem('refreshToken')
             try{
@@ -51,16 +51,3 @@ axiosInstance.interceptors.response.use(
 
 
 export default axiosInstance;
-
-
-
-// when we do axios.get ot post axios crete the config like this that contains the imp info 
-
-// {
-//   url: '/users/',
-//   method: 'get',
-//   baseURL: 'https://api.yourapp.com',
-//   headers: { 'Content-Type': 'application/json', ... },
-//   data: undefined,           // for GET
-//   // ... many other properties
-// }
